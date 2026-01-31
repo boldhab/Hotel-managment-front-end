@@ -45,7 +45,7 @@
 }
 
 .book-page__form {
-  background: #fff;
+  background: var(--c-bg-card);
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
@@ -90,7 +90,9 @@
   display: block;
   width: 100%;
   padding: 10px;
-  border: 1px solid #e5e7eb;
+  background: var(--c-bg-primary);
+  color: var(--c-text-primary);
+  border: 1px solid var(--c-border);
   border-radius: 8px;
 }
 
@@ -109,7 +111,7 @@
 }
 
 .book-page__summary {
-  background: #fff;
+  background: var(--c-bg-card);
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
@@ -123,11 +125,11 @@
 .book-page__summary-grid {
   display: grid;
   gap: 8px;
-  color: #334155;
+  color: var(--c-text-primary);
 }
 
 .book-page__summary-total {
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid var(--c-border);
   margin-top: 8px;
   padding-top: 8px;
 }

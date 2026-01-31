@@ -10,7 +10,8 @@ function Header() {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const langRef = useRef(null);
   const [theme, setTheme] = useState("light");
-//this is chech the scrollll
+
+  //this is chech the scrollll
   useEffect(() => {
     const onScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -19,7 +20,8 @@ function Header() {
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-// check the theme form the stoarge and change
+
+  // Check for saved theme in local storage
   useEffect(() => {
     const saved = localStorage.getItem("theme");
     if (saved === "dark" || saved === "light") {
@@ -36,18 +38,20 @@ function Header() {
     document.documentElement.classList.toggle("theme-dark", initial === "dark");
   }, []);
 
-  function toggleTheme  () {
+  function toggleTheme() {
     const next = theme === "dark" ? "light" : "dark";
     setTheme(next);
     localStorage.setItem("theme", next);
     document.documentElement.classList.toggle("theme-dark", next === "dark");
   };
-//language
 
-  function changeLanguage  (lng) {
+  //language
+
+  function changeLanguage(lng) {
     i18n.changeLanguage(lng);
   };
-//It finds that section on the page by its id. It scrolls smoothly to that section.
+
+  //It finds that section on the page by its id. It scrolls smoothly to that section.
   const closeMenu = () => setIsMenuOpen(false);
 
   const currentLng = (i18n.language || "en").slice(0, 2).toUpperCase();

@@ -3,7 +3,7 @@ import Rooms from '../components/Rooms/Rooms'
 
 function RoomsPage() {
   return (
-    <section style={{ padding: '40px 20px', minHeight: '60vh', background: '#f8fafc' }}>
+    <section className="standard-page-section">
       <Rooms />
     </section>
   )

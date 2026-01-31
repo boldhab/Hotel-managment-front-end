@@ -1,5 +1,5 @@
 .offer-card {
-  background: #fff;
+  background: var(--c-bg-card);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
@@ -27,6 +27,7 @@
 
 .offer-card__title {
   margin: 0;
+  color: var(--c-text-primary);
 }
 
 .offer-card__badge {
@@ -39,6 +40,7 @@
 
 .offer-card__description {
   margin: 12px 0;
+  color: var(--c-text-secondary);
 }
 
 .offer-card__actions {
@@ -64,7 +66,8 @@
 
 .offer-card__btn-secondary {
   background: transparent;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--c-border);
+  color: var(--c-text-primary);
   padding: 10px 14px;
   border-radius: 8px;
   cursor: pointer;
@@ -77,7 +80,7 @@
 
 .offer-card__code {
   padding: 12px 20px;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid var(--c-border);
   font-size: 12px;
-  color: #475569;
+  color: var(--c-text-secondary);
 }

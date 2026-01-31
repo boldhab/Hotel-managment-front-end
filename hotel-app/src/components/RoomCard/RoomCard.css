@@ -1,5 +1,5 @@
 .room-card {
-  background: white;
+  background: var(--c-bg-card);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -188,14 +188,14 @@
 
 .room-card__title {
   font-size: 1rem;
-  color: #2c3e50;
+  color: var(--c-text-primary);
   margin: 0;
 }
 
 .room-card__size {
   font-size: 0.8rem;
-  color: #6b7280;
-  background: #f3f4f6;
+  color: var(--c-text-secondary);
+  background: var(--c-bg-secondary);
   border-radius: 999px;
   padding: 0.15rem 0.5rem;
 }
@@ -204,13 +204,13 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  color: #6b7280;
+  color: var(--c-text-secondary);
   font-size: 0.85rem;
   margin-bottom: 0.5rem;
 }
 
 .room-card__description {
-  color: #6b7280;
+  color: var(--c-text-secondary);
   font-size: 0.9rem;
   line-height: 1.4;
   margin: 0.25rem 0 0.6rem;
@@ -232,22 +232,25 @@
   align-items: baseline;
   gap: 0.4rem;
 }
+
 .room-card__price strong {
   font-size: 1.1rem;
-  color: #111827;
+  color: var(--c-text-primary);
 }
+
 .room-card__unit {
-  color: #6b7280;
+  color: var(--c-text-secondary);
   font-size: 0.85rem;
   margin-left: 0.15rem;
 }
+
 .room-card__total-price {
-  color: #6b7280;
+  color: var(--c-text-secondary);
   font-size: 0.8rem;
 }
 
 .room-card__capacity {
-  color: #4b5563;
+  color: var(--c-text-secondary);
   font-size: 0.85rem;
   display: inline-flex;
   align-items: center;
@@ -257,16 +260,19 @@
 .room-card__amenities-section {
   margin-top: 0.5rem;
 }
+
 .room-card__amenities-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .room-card__amenities-header h4 {
   font-size: 0.95rem;
   margin: 0;
-  color: #111827;
+  color: var(--c-text-primary);
 }
+
 .room-card__amenities-toggle {
   background: transparent;
   border: none;
@@ -275,6 +281,7 @@
   font-weight: 600;
   font-size: 0.85rem;
 }
+
 .room-card__amenities {
   display: flex;
   flex-wrap: wrap;
@@ -283,9 +290,10 @@
   margin: 0.4rem 0 0;
   list-style: none;
 }
+
 .room-card__amenity {
-  background: #f3f4f6;
-  color: #374151;
+  background: var(--c-bg-secondary);
+  color: var(--c-text-secondary);
   border-radius: 999px;
   padding: 0.25rem 0.55rem;
   font-size: 0.8rem;
@@ -300,6 +308,7 @@
   gap: 0.5rem;
   margin-top: 0.8rem;
 }
+
 .room-card__btn {
   border: none;
   border-radius: 8px;
@@ -311,25 +320,31 @@
   gap: 0.4rem;
   font-size: 0.9rem;
 }
+
 .room-card__btn--primary {
   background: #2f6342ff;
   color: #ffffff;
 }
+
 .room-card__btn--primary:hover {
   background: #1d432bff;
 }
+
 .room-card__btn--secondary {
   background: #111827;
   color: #ffffff;
 }
+
 .room-card__btn--secondary:hover {
   background: #0b1220;
 }
+
 .room-card__btn--icon {
-  background: #f3f4f6;
-  color: #111827;
+  background: var(--c-bg-secondary);
+  color: var(--c-text-primary);
   padding: 0.45rem;
 }
+
 .room-card__btn--icon:hover {
   background: #e5e7eb;
 }
@@ -343,6 +358,7 @@
   gap: 0.35rem;
   align-items: center;
 }
+
 .room-card__availability--unavailable {
   color: #dc2626;
 }

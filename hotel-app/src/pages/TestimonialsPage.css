@@ -42,7 +42,7 @@
 }
 
 .testimonials-page__card {
-  background: #fff;
+  background: var(--c-bg-card);
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
@@ -58,7 +58,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #e2e8f0;
+  background: var(--c-bg-secondary);
   display: grid;
   place-items: center;
   font-weight: 700;
@@ -70,7 +70,7 @@
 
 .testimonials-page__meta {
   font-size: 12px;
-  color: #64748b;
+  color: var(--c-text-secondary);
 }
 
 .testimonials-page__rating {
@@ -84,7 +84,7 @@
 
 .testimonials-page__tag {
   font-size: 12px;
-  color: #64748b;
+  color: var(--c-text-secondary);
 }
 
 .testimonials-page__stats {
@@ -94,14 +94,14 @@
 
 .testimonials-page__stats-text {
   margin-bottom: 8px;
-  color: #0f172a;
+  color: var(--c-text-primary);
 }
 
 .testimonials-page__stats-icons {
   display: flex;
   gap: 16px;
   justify-content: center;
-  color: #475569;
+  color: var(--c-text-secondary);
 }
 
 .testimonials-page__cta {

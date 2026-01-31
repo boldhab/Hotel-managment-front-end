@@ -26,7 +26,7 @@ function App() {
         <Hero onStartBooking={(data) => console.log('Start booking:', data)} topRoomImageUrls={[
           '/images/rooms/deluxe-1.jpg', '/images/rooms/suite-1.jpg', '/images/rooms/standard-1.jpg'
         ]} />
-                <section style={{ padding: '100px 20px', minHeight: '60vh', background: '#f8fafc' }}>
+                <section className="home-rooms-section">
           <Rooms />
         </section>
               </>
