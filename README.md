@@ -83,3 +83,4 @@ This project supports multiple languages using `i18next`. Translation files are 
 ---
 
 *Generated for the Hotel Management Project.*
+*Developed by Habtamu Befekadu (bold hab)*
