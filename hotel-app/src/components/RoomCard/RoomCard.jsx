@@ -1,7 +1,9 @@
 import React, { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./RoomCard.css";
 
-function RoomCard({ room, selected, onToggleSelect, onView, checkIn, checkOut }) {
+function RoomCard({ room, selected, onToggleSelect, onView, checkIn, checkOut, onBook }) {
+  const { t } = useTranslation();
   const { 
     id, 
     name, 
@@ -57,8 +59,7 @@ function RoomCard({ room, selected, onToggleSelect, onView, checkIn, checkOut })
   };
 
   const handleBookNow = () => {
-    // In a real app, this would navigate to booking page or open booking modal
-    alert(`Booking ${name} for $${pricePerNight}/night`);
+    onBook?.(room);
   };
 
   const displayedAmenities = showAmenities ? amenities : amenities.slice(0, 4);
@@ -125,7 +126,7 @@ function RoomCard({ room, selected, onToggleSelect, onView, checkIn, checkOut })
             {capacity >= 4 && (
               <div className="room-card__popular">
                 <i className="fa-solid fa-fire" />
-                Popular
+                {t('roomCard.popular')}
               </div>
             )}
           </div>
@@ -168,13 +169,13 @@ function RoomCard({ room, selected, onToggleSelect, onView, checkIn, checkOut })
             <div className="room-card__price-section">
               <span className="room-card__price">
                 <strong>${pricePerNight}</strong>
-                <span className="room-card__unit">/night</span>
+                <span className="room-card__unit">{t('roomCard.perNight')}</span>
               </span>
               
               {totalPrice && (
                 <div className="room-card__total-price">
                   <span className="room-card__total-label">
-                    {nights} night{nights !== 1 ? 's' : ''} • ${totalPrice} total
+                    {nights} {t(nights === 1 ? 'roomCard.night' : 'roomCard.nights')} • ${totalPrice} {t('roomCard.total')}
                   </span>
                 </div>
               )}
@@ -182,20 +183,21 @@ function RoomCard({ room, selected, onToggleSelect, onView, checkIn, checkOut })
 
             <span className="room-card__capacity">
               <i className="fa-solid fa-user-group" /> 
-              Up to {capacity}
+              {t('roomCard.upTo', { count: capacity })}
             </span>
           </div>
 
           {/* Amenities */}
+          {/* Amenities */}
           <div className="room-card__amenities-section">
             <div className="room-card__amenities-header">
-              <h4>Amenities</h4>
+              <h4>{t('roomCard.amenities')}</h4>
               {amenities.length > 4 && (
                 <button 
                   className="room-card__amenities-toggle"
                   onClick={() => setShowAmenities(!showAmenities)}
                 >
-                  {showAmenities ? 'Show Less' : `+${amenities.length - 4} More`}
+                  {showAmenities ? t('roomCard.showLess') : t('roomCard.more', { count: amenities.length - 4 })}
                 </button>
               )}
             </div>
@@ -217,7 +219,7 @@ function RoomCard({ room, selected, onToggleSelect, onView, checkIn, checkOut })
               onClick={handleBookNow}
             >
               <i className="fa-solid fa-calendar-check" />
-              Book Now
+              {t('roomCard.bookNow')}
             </button>
             
             <button 
@@ -225,13 +227,13 @@ function RoomCard({ room, selected, onToggleSelect, onView, checkIn, checkOut })
               onClick={handleQuickView}
             >
               <i className="fa-solid fa-eye" />
-              Quick View
+              {t('roomCard.quickView')}
             </button>
 
             <button 
               className="room-card__btn room-card__btn--icon"
               onClick={() => onToggleSelect?.(id)}
-              title={selected ? "Remove from comparison" : "Add to comparison"}
+              title={selected ? t('roomCard.removeFromComparison') : t('roomCard.addToComparison')}
             >
               <i className={`fa-solid ${selected ? 'fa-square-check' : 'fa-code-compare'}`} />
             </button>
@@ -241,7 +243,7 @@ function RoomCard({ room, selected, onToggleSelect, onView, checkIn, checkOut })
           {checkIn && checkOut && (
             <div className="room-card__availability">
               <i className="fa-solid fa-circle-check" />
-              Available for your dates
+              {t('roomCard.available')}
             </div>
           )}
         </div>

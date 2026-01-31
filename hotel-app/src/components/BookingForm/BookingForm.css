@@ -2,7 +2,7 @@
   background: #fff;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
 }
 
 .booking-form__grid {
@@ -27,3 +27,26 @@
   cursor: pointer;
 }
 
+.booking-form__submit {
+  background: #0f766e;
+  color: #fff;
+  padding: 12px 16px;
+  background-color: #0f766e;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.booking-form__submit:hover {
+  background-color: #0d5d56;
+}
+
+.booking-form__submit:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.booking-form__payment input {
+  font-family: monospace;
+  letter-spacing: 1px;
+}

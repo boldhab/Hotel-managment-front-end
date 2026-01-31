@@ -5,11 +5,11 @@
     "amenities": "Amenities",
     "offers": "Offers",
     "experiences": "Experiences",
+    "testimonials": "Testimonials",
     "contact": "Contact",
     "bookNow": "Book Now",
     "language": "Language"
-  }
-  ,
+  },
   "hero": {
     "welcome": "Welcome to",
     "brand": "Your Perfect Getaway",
@@ -19,7 +19,221 @@
     "guests": "Guests",
     "guest": "Guest",
     "search": "Search"
+  },
+  "rooms": {
+    "title": "Our Rooms & Suites",
+    "subtitle": "Find the perfect space for your stay.",
+    "searchPlaceholder": "Search rooms...",
+    "filterType": "Filter by Type",
+    "allTypes": "All Types",
+    "standard": "Standard",
+    "deluxe": "Deluxe",
+    "suite": "Suite",
+    "filterBudget": "Filter by Budget",
+    "sortBy": "Sort by",
+    "priceLowHigh": "Price: Low to High",
+    "priceHighLow": "Price: High to Low",
+    "totalResults": "Showing {{count}} of {{total}} rooms",
+    "clearFilters": "Clear Filters",
+    "noResults": "No rooms found",
+    "compareBar": "{{count}} rooms selected for comparison",
+    "compareNow": "Compare Now",
+    "compareTitle": "Room Comparison",
+    "quickView": "Quick View",
+    "compare": "Compare",
+    "booked": "Booked",
+    "clearSelection": "Clear Selection",
+    "loadingText": "Finding the perfect rooms for you...",
+    "tryAdjustingFilters": "Try adjusting your filters or search terms to see more options.",
+    "dates": "Dates",
+    "guestsCapacity": "Guests & Capacity",
+    "anyCapacity": "Any capacity",
+    "allAmenities": "All Amenities",
+    "minRating": "Min Rating",
+    "any": "Any",
+    "highestRated": "Highest Rated",
+    "lowestRated": "Lowest Rated",
+    "largestCapacity": "Largest Capacity",
+    "largestSize": "Largest Size",
+    "nameAsc": "Name: A-Z",
+    "nameDesc": "Name: Z-A",
+    "feature": "Feature",
+    "close": "Close",
+    "bookSelected": "Book Selected Rooms"
+  },
+  "roomCard": {
+    "bookNow": "Book Now",
+    "quickView": "Quick View",
+    "compare": "Compare",
+    "perNight": "/ night",
+    "viewDetails": "View Details",
+    "amenities": "Amenities",
+    "popular": "Popular",
+    "night": "night",
+    "nights": "nights",
+    "total": "total",
+    "upTo": "Up to {{count}} guests",
+    "showLess": "Show Less",
+    "more": "+{{count}} More",
+    "removeFromComparison": "Remove from comparison",
+    "addToComparison": "Add to comparison",
+    "available": "Available for your dates"
+  },
+  "quickView": {
+    "title": "Room Details",
+    "reviews": "reviews",
+    "rating": "Rating",
+    "area": "Area",
+    "bed": "Bed",
+    "capacity": "Capacity",
+    "description": "Description",
+    "amenities": "Amenities",
+    "bookButton": "Book This Room Now"
+  },
+  "booking": {
+    "modalTitle": "Complete Your Booking",
+    "booking": "Booking",
+    "perNight": "/ night",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "adults": "Adults",
+    "children": "Children",
+    "room": "Room",
+    "priceEstimate": "Price estimate",
+    "continuePayment": "Continue to Payment",
+    "backDetails": "Back to details",
+    "cardNumber": "Card Number",
+    "expiry": "Expiry Date",
+    "cvc": "CVC",
+    "cardholder": "Cardholder Name",
+    "totalPay": "Total to pay",
+    "payBook": "Pay & Book",
+    "processing": "Processing...",
+    "success": "Success! You have booked {{room}} for ${{total}}."
+  },
+  "amenities": {
+    "title": "Our Amenities",
+    "heroTitle": "Unwind in Comfort",
+    "heroSubtitle": "Experience ultimate relaxation and convenience.",
+    "sectionTitle": "Explore Our Facilities",
+    "sectionSubtitle": "Everything you need for a perfect stay.",
+    "exploreRooms": "Explore Our Rooms",
+    "categories": {
+      "comforts": {
+        "title": "Room Comforts",
+        "items": [
+          "King beds",
+          "Smart climate control",
+          "Luxury linens"
+        ]
+      },
+      "wellness": {
+        "title": "Wellness & Spa",
+        "items": [
+          "Massages",
+          "Sauna",
+          "Gym & Yoga"
+        ]
+      },
+      "dining": {
+        "title": "Dining & Bars",
+        "items": [
+          "On-site restaurant",
+          "Rooftop lounge",
+          "Breakfast buffet"
+        ]
+      },
+      "outdoor": {
+        "title": "Outdoor & Leisure",
+        "items": [
+          "Pool",
+          "Garden",
+          "Bike rentals"
+        ]
+      },
+      "business": {
+        "title": "Business & Events",
+        "items": [
+          "Meeting rooms",
+          "Conference hall",
+          "Coworking"
+        ]
+      },
+      "family": {
+        "title": "Family-Friendly",
+        "items": [
+          "Kids' pool",
+          "Babysitting",
+          "Family suites"
+        ]
+      }
+    }
+  },
+  "offers": {
+    "title": "Offers",
+    "heroTitle": "Exclusive Offers & Packages",
+    "heroSubtitle": "Make your next stay unforgettable — at an exclusive rate.",
+    "claimOffer": "Claim Your Offer",
+    "bookNow": "Book Now",
+    "learnMore": "Learn More",
+    "useCode": "Use code",
+    "detailsNotice": "details",
+    "list": {
+      "romantic": {
+        "title": "Romantic Escape",
+        "description": "Champagne, dinner, and late checkout.",
+        "badge": "Save 20%"
+      },
+      "earlyBird": {
+        "title": "Early Bird Special",
+        "description": "Save 15% when booking 30+ days ahead.",
+        "badge": "15% Off"
+      },
+      "gourmet": {
+        "title": "Gourmet Experience",
+        "description": "Dinner for two with wine pairing.",
+        "badge": "Dinner Included"
+      },
+      "spa": {
+        "title": "Spa Indulgence",
+        "description": "Massage and breakfast included.",
+        "badge": "Spa + Breakfast"
+      }
+    }
+  },
+  "experiences": {
+    "title": "Discover Experiences Beyond Your Stay",
+    "heroSubtitle": "Live the story, not just the stay.",
+    "bookExperience": "Book Experience",
+    "addStay": "Add to Your Stay"
+  },
+  "testimonials": {
+    "title": "What Our Guests Say",
+    "heroSubtitle": "Hear from those who have experienced our hospitalty.",
+    "sectionTitle": "Guest Reviews",
+    "sectionSubtitle": "Real stories from real guests."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "heroSubtitle": "We are here to help with any questions or requests.",
+    "infoTitle": "Contact Information",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "office": "Office",
+    "formTitle": "Send Us a Message",
+    "name": "Full Name",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!"
+  },
+  "footer": {
+    "tagline": "Luxury stays crafted with care.",
+    "explore": "Explore",
+    "contact": "Contact",
+    "book": "Book",
+    "rights": "All rights reserved."
   }
 }
-
-

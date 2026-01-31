@@ -1,7 +1,8 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import OfferCard from '../components/Offers/OfferCard'
-import './OffersPage.css'
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link, useNavigate } from 'react-router-dom';
+import OfferCard from '../components/Offers/OfferCard';
+import './OffersPage.css';
 
 const offers = [
   { title: 'Romantic Escape', description: 'Champagne, dinner, and late checkout.', badge: 'Save 20%', image: '/images/offer/romantic-escape.jpg', code: 'LOVE20' },
@@ -11,32 +12,43 @@ const offers = [
 ]
 
 function OffersPage() {
-  const navigate = useNavigate()
-  return (
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+  
+  const offerList = [
+    { key: 'romantic', image: '/images/offer/romantic-escape.jpg', code: 'LOVE20' },
+    { key: 'earlyBird', image: '/images/offer/bird-special.jpg', code: 'EARLY15' },
+    { key: 'gourmet', image: '/images/offer/gourmet-experience.jpg', code: 'FOODIE' },
+    { key: 'spa', image: '/images/amenties/spa-indulgence.jpg', code: 'RELAX' },
+  ];
     <div>
       <section className="offers-page__hero">
         <div className="offers-page__hero-overlay" />
         <div className="offers-page__hero-content">
-          <h1 className="offers-page__hero-title">Exclusive Offers & Packages</h1>
-          <p className="offers-page__hero-subtitle">Make your next stay unforgettable — at an exclusive rate.</p>
+          <h1 className="offers-page__hero-title">{t('offers.heroTitle')}</h1>
+          <p className="offers-page__hero-subtitle">{t('offers.heroSubtitle')}</p>
         </div>
       </section>
 
       <section className="offers-page__content">
         <div className="offers-page__grid">
-          {offers.map((o) => (
+          {offerList.map((o) => (
             <OfferCard
-              key={o.title}
-              {...o}
-              onPrimary={() => navigate(`/book?promo=${encodeURIComponent(o.code)}`)}
-              onSecondary={() => alert(o.title + ' details')}
+              key={o.key}
+              title={t(`offers.list.${o.key}.title`)}
+              description={t(`offers.list.${o.key}.description`)}
+              badge={t(`offers.list.${o.key}.badge`)}
+              image={o.image}
+              code={o.code}
+              onPrimary={() => navigate('/rooms')}
+              onSecondary={() => alert(t(`offers.list.${o.key}.title`) + ' ' + t('offers.detailsNotice'))}
             />
           ))}
         </div>
       </section>
 
       <section className="offers-page__cta">
-        <Link to="/book" className="offers-page__cta-link">Claim Your Offer</Link>
+        <Link to="/rooms" className="offers-page__cta-link">{t('offers.claimOffer')}</Link>
       </section>
     </div>
   )

@@ -1,7 +1,10 @@
 import React, { Suspense, useEffect, useMemo, useState, useTransition } from "react";
+import { useTranslation } from "react-i18next";
 const RoomCard = React.lazy(() => import("../RoomCard/RoomCard"));
 import RoomCardSkeleton from "./RoomCardSkeleton";
 const ComparisonModal = React.lazy(() => import("./ComparisonModal"));
+const BookingModal = React.lazy(() => import("./BookingModal"));
+const RoomQuickViewModal = React.lazy(() => import("./RoomQuickViewModal"));
 import "./Rooms.css";
 
 
@@ -293,6 +296,7 @@ const checkRoomAvailability = (roomId, checkIn, checkOut, bookings) => {
 };
 
 function Rooms() {
+  const { t } = useTranslation();
   // State from URL parameters
   const [urlParams, updateUrlParams] = useURLState();
   
@@ -310,6 +314,8 @@ function Rooms() {
   const [isPending, startTransition] = useTransition();
   const [rooms, setRooms] = useState([]);
   const [selected, setSelected] = useSelectedRooms();
+  const [bookingRoom, setBookingRoom] = useState(null);
+  const [quickViewRoom, setQuickViewRoom] = useState(null);
   const [showComparisonModal, setShowComparisonModal] = useState(false);
 
   // Debounced search term
@@ -497,73 +503,73 @@ function Rooms() {
   return (
     <section id="rooms" className="rooms">
       <div className="rooms__header">
-        <h2>Available Rooms</h2>
-        <p>Find the perfect room for your stay</p>
+        <h2>{t('rooms.title')}</h2>
+        <p>{t('rooms.subtitle')}</p>
       </div>
 
       <div className="rooms__controls">
         <div className="rooms__search-section">
           <input
             type="text"
-            placeholder="Search rooms by name or description..."
+            placeholder={t('rooms.searchPlaceholder')}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="rooms__search"
           />
           {hasActiveFilters && (
             <button className="rooms__clear-filters" onClick={clearAllFilters}>
-              Clear All Filters
+              {t('rooms.clearFilters')}
             </button>
           )}
         </div>
 
         <div className="rooms__filters-grid">
           <div className="filter-group">
-            <label>Dates</label>
+            <label>{t('rooms.dates') || 'Dates'}</label>
             <div className="date-inputs">
               <input 
                 type="date" 
                 value={checkIn} 
                 min={today}
                 onChange={(e) => setCheckIn(e.target.value)} 
-                placeholder="Check-in" 
-                title="Check-in" 
+                placeholder={t('hero.checkIn')} 
+                title={t('hero.checkIn')} 
               />
               <input 
                 type="date" 
                 value={checkOut} 
                 min={checkIn || today}
                 onChange={(e) => setCheckOut(e.target.value)} 
-                placeholder="Check-out" 
-                title="Check-out" 
+                placeholder={t('hero.checkOut')} 
+                title={t('hero.checkOut')} 
               />
             </div>
           </div>
 
           <div className="filter-group">
-            <label>Guests & Capacity</label>
+            <label>{t('rooms.guestsCapacity') || 'Guests & Capacity'}</label>
             <div className="guest-inputs">
               <select value={guests} onChange={(e) => setGuests(Number(e.target.value))}>
                 {[1,2,3,4,5,6].map(n => (
                   <option key={n} value={n}>
-                    {n} {n===1?'Guest':'Guests'}
+                    {n} {n===1 ? t('hero.guest') : t('hero.guests')}
                   </option>
                 ))}
               </select>
 
               <select value={capacity} onChange={(e) => setCapacity(Number(e.target.value))}>
-                <option value={0}>Any capacity</option>
+                <option value={0}>{t('rooms.anyCapacity') || 'Any capacity'}</option>
                 {[1,2,3,4,5,6].map(n => (
-                  <option key={n} value={n}>{n}+ guests</option>
+                  <option key={n} value={n}>{n}+ {t('hero.guests').toLowerCase()}</option>
                 ))}
               </select>
             </div>
           </div>
 
           <div className="filter-group">
-            <label>Amenities</label>
+            <label>{t('rooms.amenities') || 'Amenities'}</label>
             <select value={amenity} onChange={(e) => setAmenity(e.target.value)}>
-              <option value="">All Amenities</option>
+              <option value="">{t('rooms.allAmenities') || 'All Amenities'}</option>
               {['Wi-Fi','Breakfast','Sea View','Balcony','Kitchenette','City View','Kids Bed','Jacuzzi','Smart TV','Air Conditioning'].map(a => (
                 <option key={a} value={a}>{a}</option>
               ))}
@@ -571,10 +577,10 @@ function Rooms() {
           </div>
 
           <div className="filter-group">
-            <label>Min Rating</label>
+            <label>{t('rooms.minRating') || 'Min Rating'}</label>
             <select value={minRating} onChange={(e) => setMinRating(Number(e.target.value))}>
               {[0,3,3.5,4,4.5].map(r => (
-                <option key={r} value={r}>{r === 0 ? 'Any' : `${r}+`}</option>
+                <option key={r} value={r}>{r === 0 ? t('rooms.any') || 'Any' : `${r}+`}</option>
               ))}
             </select>
           </div>
@@ -583,16 +589,16 @@ function Rooms() {
         </div>
 
         <div className="rooms__sorting">
-          <label>Sort by:</label>
+          <label>{t('rooms.sortBy')}:</label>
           <select value={sort} onChange={(e) => setSort(e.target.value)}>
-            <option value="priceAsc">Price: Low to High</option>
-            <option value="priceDesc">Price: High to Low</option>
-            <option value="ratingDesc">Highest Rated</option>
-            <option value="ratingAsc">Lowest Rated</option>
-            <option value="capDesc">Largest Capacity</option>
-            <option value="sizeDesc">Largest Size</option>
-            <option value="nameAsc">Name: A-Z</option>
-            <option value="nameDesc">Name: Z-A</option>
+            <option value="priceAsc">{t('rooms.priceLowHigh')}</option>
+            <option value="priceDesc">{t('rooms.priceHighLow')}</option>
+            <option value="ratingDesc">{t('rooms.highestRated') || 'Highest Rated'}</option>
+            <option value="ratingAsc">{t('rooms.lowestRated') || 'Lowest Rated'}</option>
+            <option value="capDesc">{t('rooms.largestCapacity') || 'Largest Capacity'}</option>
+            <option value="sizeDesc">{t('rooms.largestSize') || 'Largest Size'}</option>
+            <option value="nameAsc">{t('rooms.nameAsc') || 'Name: A-Z'}</option>
+            <option value="nameDesc">{t('rooms.nameDesc') || 'Name: Z-A'}</option>
           </select>
         </div>
         
@@ -601,7 +607,7 @@ function Rooms() {
       {selectedRooms.length > 0 && (
         <div className="rooms__compare-bar">
           <div className="compare-info">
-            <strong>{selectedRooms.length}</strong> room{selectedRooms.length !== 1 ? 's' : ''} selected for comparison
+            {t('rooms.compareBar', { count: selectedRooms.length })}
           </div>
           <button 
             className="rooms__compare-btn" 
@@ -609,13 +615,13 @@ function Rooms() {
             disabled={selectedRooms.length < 2}
           >
             <i className="fa-solid fa-code-compare" /> 
-            Compare {selectedRooms.length > 1 ? `(${selectedRooms.length})` : ''}
+            {t('rooms.compareNow')} {selectedRooms.length > 1 ? `(${selectedRooms.length})` : ''}
           </button>
           <button 
             className="rooms__clear-selection"
             onClick={() => setSelected({})}
           >
-            Clear Selection
+            {t('rooms.clearSelection') || 'Clear Selection'}
           </button>
         </div>
       )}
@@ -625,7 +631,7 @@ function Rooms() {
           <div className="loading-spinner">
             <i className="fa-solid fa-spinner fa-spin" />
           </div>
-          <p>Finding the perfect rooms for you...</p>
+          <p>{t('rooms.loadingText') || 'Finding the perfect rooms for you...'}</p>
           <div className="rooms__grid">
             {[...Array(6)].map((_, index) => (
               <RoomCardSkeleton key={index} />
@@ -637,16 +643,16 @@ function Rooms() {
           {sortedRooms.length === 0 ? (
             <div className="rooms__empty">
               <i className="fa-solid fa-magnifying-glass" />
-              <h3>No rooms found</h3>
-              <p>Try adjusting your filters or search terms to see more options.</p>
+              <h3>{t('rooms.noResults')}</h3>
+              <p>{t('rooms.tryAdjustingFilters') || 'Try adjusting your filters or search terms to see more options.'}</p>
               <button className="rooms__clear-filters" onClick={clearAllFilters}>
-                Clear All Filters
+                {t('rooms.clearFilters')}
               </button>
             </div>
           ) : (
             <>
               <div className="rooms__results-info">
-                <p>Showing {sortedRooms.length} of {mockRooms.length} rooms</p>
+                <p>{t('rooms.totalResults', { count: sortedRooms.length, total: mockRooms.length })}</p>
               </div>
               <div className="rooms__grid">
                 {sortedRooms.map((room) => (
@@ -656,10 +662,11 @@ function Rooms() {
                         room={room}
                         selected={!!selected[room.id]}
                         onToggleSelect={() => toggleSelect(room.id)}
-                        onView={(r) => console.log('View room', r)}
+                        onView={(r) => setQuickViewRoom(r)}
                         checkIn={checkIn}
                         checkOut={checkOut}
                         available={availabilityMap[room.id] ?? true}
+                        onBook={(r) => setBookingRoom({ ...r, checkIn, checkOut })}
                       />
                     </Suspense>
                   </div>
@@ -675,6 +682,25 @@ function Rooms() {
           <ComparisonModal
             rooms={selectedRooms}
             onClose={() => setShowComparisonModal(false)}
+          />
+        </Suspense>
+      )}
+
+      {bookingRoom && (
+        <Suspense fallback={null}>
+          <BookingModal
+            room={bookingRoom}
+            onClose={() => setBookingRoom(null)}
+          />
+        </Suspense>
+      )}
+
+      {quickViewRoom && (
+        <Suspense fallback={null}>
+          <RoomQuickViewModal
+            room={quickViewRoom}
+            onClose={() => setQuickViewRoom(null)}
+            onBook={(r) => setBookingRoom({ ...r, checkIn, checkOut })}
           />
         </Suspense>
       )}

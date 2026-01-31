@@ -21,6 +21,17 @@ function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Click outside for language menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (langRef.current && !langRef.current.contains(event.target)) {
+        setIsLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   // Check for saved theme in local storage
   useEffect(() => {
     const saved = localStorage.getItem("theme");
@@ -95,8 +106,7 @@ function Header() {
             {t("header.experiences")}
           </Link>
           <Link to="/testimonials" onClick={closeMenu}>
-            Testimonials
-            
+            {t("header.testimonials")}
           </Link>
           <Link to="/contact" onClick={closeMenu}>
             {t("header.contact")}
@@ -106,7 +116,7 @@ function Header() {
         <div className="header__actions">
           <Link
             className="header__cta"
-            to="/book"
+            to="/rooms"
             onClick={closeMenu}
           >
             {t("header.bookNow")}

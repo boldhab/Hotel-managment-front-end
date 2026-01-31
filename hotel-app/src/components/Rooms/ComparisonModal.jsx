@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function ComparisonModal({ rooms, onClose }) {
+  const { t } = useTranslation();
   if (!rooms || rooms.length === 0) return null;
 
   const allAmenities = [...new Set(rooms.flatMap(room => room.amenities))];
@@ -100,7 +102,7 @@ function ComparisonModal({ rooms, onClose }) {
     <div style={styles.overlay} onClick={onClose}>
       <div style={styles.modal} onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
         <div style={styles.header}>
-          <h3>Compare Rooms</h3>
+          <h3>{t('rooms.compareTitle')}</h3>
           <button style={styles.close} onClick={onClose} aria-label="Close comparison">
             <i className="fa-solid fa-times"></i>
           </button>
@@ -109,27 +111,27 @@ function ComparisonModal({ rooms, onClose }) {
         <div style={styles.content}>
           <div style={styles.table}>
             <div style={{...styles.row, fontWeight: 600}}>
-              <div style={{...styles.cell, ...styles.feature}}>Feature</div>
+              <div style={{...styles.cell, ...styles.feature}}>{t('rooms.feature') || 'Feature'}</div>
               {rooms.map(room => (
                 <div key={room.id} style={{...styles.cell, ...styles.roomHeader}}>
                   <img style={styles.roomImg} src={room.imageUrl} alt={room.name} />
                   <h4>{room.name}</h4>
-                  <div className="room-price">${room.pricePerNight}/night</div>
+                  <div className="room-price">${room.pricePerNight}{t('roomCard.perNight')}</div>
                 </div>
               ))}
             </div>
 
             <div style={styles.row}>
-              <div style={{...styles.cell, ...styles.feature}}>Capacity</div>
+              <div style={{...styles.cell, ...styles.feature}}>{t('quickView.capacity')}</div>
               {rooms.map(room => (
                 <div key={room.id} style={styles.cell}>
-                  {room.capacity} guests
+                  {room.capacity} {t('hero.guests').toLowerCase()}
                 </div>
               ))}
             </div>
 
             <div style={styles.row}>
-              <div style={{...styles.cell, ...styles.feature}}>Size</div>
+              <div style={{...styles.cell, ...styles.feature}}>{t('quickView.area')}</div>
               {rooms.map(room => (
                 <div key={room.id} style={styles.cell}>
                   {room.size}
@@ -138,16 +140,16 @@ function ComparisonModal({ rooms, onClose }) {
             </div>
 
             <div style={styles.row}>
-              <div style={{...styles.cell, ...styles.feature}}>Rating</div>
+              <div style={{...styles.cell, ...styles.feature}}>{t('quickView.rating') || 'Rating'}</div>
               {rooms.map(room => (
                 <div key={room.id} style={styles.cell}>
-                  ⭐ {room.rating} ({room.reviews} reviews)
+                  ⭐ {room.rating} ({room.reviews} {t('quickView.reviews')})
                 </div>
               ))}
             </div>
 
             <div style={styles.row}>
-              <div style={{...styles.cell, ...styles.feature}}>Bed Type</div>
+              <div style={{...styles.cell, ...styles.feature}}>{t('quickView.bed')}</div>
               {rooms.map(room => (
                 <div key={room.id} style={styles.cell}>
                   {room.bedType}
@@ -174,10 +176,10 @@ function ComparisonModal({ rooms, onClose }) {
 
         <div style={styles.footer}>
           <button style={styles.btnSecondary} onClick={onClose}>
-            Close
+            {t('rooms.close') || 'Close'}
           </button>
           <button style={styles.btnPrimary}>
-            Book Selected Rooms
+            {t('rooms.bookSelected') || 'Book Selected Rooms'}
           </button>
         </div>
       </div>

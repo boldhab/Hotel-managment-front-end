@@ -38,7 +38,7 @@ function ExperiencesPage() {
       </section>
 
       <section className="experiences-page__cta">
-        <Link to="/book" className="experiences-page__cta-link">Add to Your Stay</Link>
+        <Link to="/rooms" className="experiences-page__cta-link">Add to Your Stay</Link>
       </section>
     </div>
   )
