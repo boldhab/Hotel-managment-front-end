@@ -11,10 +11,22 @@ function Header() {
   const langRef = useRef(null);
   const [theme, setTheme] = useState("light");
 
-  //this is chech the scrollll
+  // Optimize scroll listener to prevent redundant re-renders
   useEffect(() => {
+    let ticking = false;
     const onScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrolled = window.scrollY > 10;
+          setIsScrolled(prev => {
+            // Only update state if value actually changed
+            if (prev !== scrolled) return scrolled;
+            return prev;
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
