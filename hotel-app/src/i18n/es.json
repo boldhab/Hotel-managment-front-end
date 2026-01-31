@@ -12,13 +12,42 @@
   },
   "hero": {
     "welcome": "Bienvenido a",
-    "brand": "Tu escapada perfecta",
-    "tagline": "Lujo, confort y experiencias inolvidables.",
+    "brand": "Hotel Gran Etiopía",
+    "tagline": "Experimenta el corazón de África con lujo y confort.",
     "checkIn": "Entrada",
     "checkOut": "Salida",
     "guests": "Huéspedes",
     "guest": "Huésped",
     "search": "Buscar"
+  },
+  "home": {
+    "experiences": {
+      "bookedAlert": "Reservado: {{title}}",
+      "guidedHike": {
+        "title": "Senderismo guiado por la costa",
+        "text": "Explora senderos escénicos con nuestro guía experto.",
+        "duration": "3h",
+        "price": "49 $"
+      },
+      "sunsetCruise": {
+        "title": "Cultura Local",
+        "text": "Crucero al atardecer con refrescos.",
+        "duration": "2h",
+        "price": "69 $"
+      },
+      "chefCooking": {
+        "title": "Clase de cocina",
+        "text": "Aprende recetas locales con nuestro chef.",
+        "duration": "2.5h",
+        "price": "59 $"
+      },
+      "sunriseYoga": {
+        "title": "Retiro de Yoga",
+        "text": "Yoga al amanecer y meditación.",
+        "duration": "1.5h",
+        "price": "29 $"
+      }
+    }
   },
   "rooms": {
     "title": "Nuestras Habitaciones y Suites",
@@ -112,46 +141,213 @@
     "success": "¡Éxito! Has reservado {{room}} por ${{total}}."
   },
   "amenities": {
-    "title": "Nuestros Servicios",
+    "title": "Servicios",
+    "heroTitle": "Relájate con confort",
     "heroSubtitle": "Experimenta la máxima relajación y conveniencia.",
     "sectionTitle": "Explora nuestras instalaciones",
-    "sectionSubtitle": "Todo lo que necesitas para una estancia perfecta."
+    "sectionSubtitle": "Todo lo que necesitas para una estancia perfecta.",
+    "exploreRooms": "Explora nuestras habitaciones",
+    "categories": {
+      "comforts": {
+        "title": "Comodidades de la habitación",
+        "items": [
+          "Camas King",
+          "Climatización inteligente",
+          "Ropa de cama de lujo"
+        ]
+      },
+      "wellness": {
+        "title": "Bienestar y Spa",
+        "items": [
+          "Masajes",
+          "Sauna",
+          "Gimnasio y Yoga"
+        ]
+      },
+      "dining": {
+        "title": "Restauración y Bares",
+        "items": [
+          "Restaurante propio",
+          "Terraza chill-out",
+          "Buffet de desayuno"
+        ]
+      },
+      "outdoor": {
+        "title": "Aire libre y Ocio",
+        "items": [
+          "Piscina",
+          "Jardín",
+          "Alquiler de bicis"
+        ]
+      },
+      "business": {
+        "title": "Negocios y Eventos",
+        "items": [
+          "Salas de reuniones",
+          "Salón de actos",
+          "Coworking"
+        ]
+      },
+      "family": {
+        "title": "Ideal para familias",
+        "items": [
+          "Piscina infantil",
+          "Servicio de niñera",
+          "Suites familiares"
+        ]
+      }
+    }
   },
   "offers": {
-    "title": "Ofertas y Paquetes Exclusivos",
+    "title": "Ofertas",
+    "heroTitle": "Ofertas y Paquetes Exclusivos",
     "heroSubtitle": "Haz que tu próxima estancia sea inolvidable — a una tarifa exclusiva.",
     "claimOffer": "Reclamar oferta",
     "bookNow": "Reservar ahora",
     "learnMore": "Saber más",
-    "useCode": "Usar código"
+    "useCode": "Usar código",
+    "detailsNotice": "detalles",
+    "list": {
+      "romantic": {
+        "title": "Escapada Romántica",
+        "description": "Champán, cena y salida tardía.",
+        "badge": "Ahorra 20%"
+      },
+      "earlyBird": {
+        "title": "Reserva Anticipada",
+        "description": "Ahorra 15% reservando con 30+ días de antelación.",
+        "badge": "15% Dto"
+      },
+      "gourmet": {
+        "title": "Experiencia Gourmet",
+        "description": "Cena para dos con maridaje de vinos.",
+        "badge": "Cena incluida"
+      },
+      "spa": {
+        "title": "Capricho Spa",
+        "description": "Masaje y desayuno incluidos.",
+        "badge": "Spa + Desayuno"
+      }
+    }
   },
   "experiences": {
-    "title": "Descubre experiencias más allá de tu estancia",
+    "title": "Experiencias",
+    "heroTitle": "Descubre experiencias más allá de tu estancia",
     "heroSubtitle": "Vive la historia, no solo la estancia.",
     "bookExperience": "Reservar experiencia",
-    "addStay": "Añadir a tu estancia"
+    "addStay": "Añadir a tu estancia",
+    "categories": {
+      "outdoor": {
+        "title": "Aventuras al aire libre",
+        "items": [
+          "Senderismo guiado",
+          "Paseos en barco",
+          "Excursiones a la playa"
+        ]
+      },
+      "culinary": {
+        "title": "Delicias culinarias",
+        "items": [
+          "Clases de cocina",
+          "Catas de vinos"
+        ]
+      },
+      "wellness": {
+        "title": "Relajación y Bienestar",
+        "items": [
+          "Rituales de spa",
+          "Retiros de yoga"
+        ]
+      },
+      "culture": {
+        "title": "Cultura local",
+        "items": [
+          "Festivals",
+          "Art galleries",
+          "Music nights"
+        ]
+      }
+    }
   },
   "testimonials": {
-    "title": "Lo que dicen nuestros huéspedes",
-    "heroSubtitle": "Escucha de quienes han experimentado nuestra hospitalidad.",
+    "title": "Testimonios",
+    "heroTitle": "Lo que dicen nuestros huéspedes",
+    "heroSubtitle": "Valoración de 4.9/5 de viajeros de todo el mundo.",
     "sectionTitle": "Reseñas de huéspedes",
-    "sectionSubtitle": "Historias reales de huéspedes reales."
+    "sectionSubtitle": "Historias reales de huéspedes reales.",
+    "statsText": "Media de 4.9 / 5 en más de 450 reseñas.",
+    "bookCta": "Vívelo tú mismo — Reserva ahora",
+    "list": {
+      "sophia": {
+        "name": "Sophia M.",
+        "country": "EE. UU.",
+        "date": "Sep 2025",
+        "comment": "¡Una estancia inolvidable! El personal hizo todo lo posible para que nuestro aniversario fuera especial.",
+        "tag": "Estancia en Suite de Lujo"
+      },
+      "liam": {
+        "name": "Liam O.",
+        "country": "Irlanda",
+        "date": "Ago 2025",
+        "comment": "Habitaciones preciosas y las vistas de la piscina infinita son impresionantes. ¡Muy recomendado!",
+        "tag": "Vacaciones familiares"
+      },
+      "aisha": {
+        "name": "Aisha K.",
+        "country": "EAU",
+        "date": "Jul 2025",
+        "comment": "Me encantó el spa y el buffet de desayuno. Sin duda volveré.",
+        "tag": "Escapada de bienestar"
+      }
+    }
   },
   "contact": {
-    "title": "Ponte en contacto",
-    "heroSubtitle": "Estamos aquí para ayudarte con cualquier duda o petición.",
-    "infoTitle": "Información de contacto",
-    "address": "Dirección",
+    "title": "Contacto",
+    "heroTitle": "Ponte en contacto",
+    "heroSubtitle": "Experimente la auténtica hospitalidad etíope en el corazón de Addis Abeba.",
+    "infoTitle": "Contáctenos en Addis Abeba",
+    "addressLabel": "Dirección",
+    "address": "Bole Road, Addis Abeba, Etiopía",
     "phone": "Teléfono",
+    "phoneValue": "+251 11 123 4567",
     "email": "Correo electrónico",
+    "emailValue": "contacto@ethiopiagrandhotel.com",
+    "hours": "Horario",
+    "hours24": "Recepción 24/7 abierta",
     "office": "Oficina",
     "formTitle": "Envíanos un mensaje",
-    "name": "Nombre completo",
+    "successMsg": "¡Gracias! Tu mensaje ha sido enviado con éxito. Te responderemos pronto.",
+    "validationError": "Por favor, rellena todos los campos obligatorios (Nombre, Email y Mensaje).",
+    "fullName": "Nombre completo",
+    "emailAddr": "Correo electrónico",
+    "phoneNum": "Número de teléfono",
     "subject": "Asunto",
-    "message": "Mensaje",
-    "send": "Enviar mensaje",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Cuéntanos cómo podemos ayudarte...",
+    "sendBtn": "Enviar mensaje",
     "sending": "Enviando...",
     "success": "¡Mensaje enviado con éxito!"
+  },
+  "bookNow": {
+    "heroTitle": "Tu estancia en Etiopía te espera",
+    "heroSubtitle": "Reserva segura, confirmación instantánea.",
+    "currency": "Moneda",
+    "promoCode": "Código promocional",
+    "optional": "Opcional",
+    "confirmBooking": "Confirmar reserva",
+    "summary": "Resumen",
+    "nights": "Noches",
+    "baseNight": "Base/noche",
+    "subtotal": "Subtotal",
+    "discount": "Descuento",
+    "taxes": "Impuestos",
+    "total": "Total",
+    "securePayment": "Pago seguro (SSL)",
+    "validDatesError": "Por favor, selecciona fechas válidas.",
+    "checkoutAfterError": "La salida debe ser después de la entrada.",
+    "nameEmailError": "Por favor, introduce tu nombre y correo electrónico.",
+    "confirmedMsg": "¡Gracias! Tu reserva está confirmada.",
+    "bookingId": "ID"
   },
   "footer": {
     "tagline": "Estancias de lujo creadas con cuidado.",

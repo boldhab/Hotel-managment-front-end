@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
-import './Contact.css'
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import './Contact.css';
 
 function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,8 +26,8 @@ function Contact() {
     e.preventDefault()
     
     if (!formData.name || !formData.email || !formData.message) {
-      alert('Please fill in all required fields (Name, Email, and Message).')
-      return
+      alert(t('contact.validationError'));
+      return;
     }
 
     setIsSubmitting(true)
@@ -54,59 +56,59 @@ function Contact() {
       <section className="contact-page__hero">
         <div className="contact-page__hero-overlay" />
         <div className="contact-page__hero-content">
-          <h1 className="contact-page__hero-title">Get In Touch</h1>
-          <p className="contact-page__hero-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+          <h1 className="contact-page__hero-title">{t('contact.heroTitle')}</h1>
+          <p className="contact-page__hero-subtitle">{t('contact.heroSubtitle')}</p>
         </div>
       </section>
 
       <section className="contact-page__content">
         <div className="contact-page__container">
           <div className="contact-page__info">
-            <h2>Contact Information</h2>
+            <h2>{t('contact.infoTitle')}</h2>
             <div className="contact-page__info-item">
               <i className="fa-solid fa-location-dot" />
               <div>
-                <strong>Address</strong>
-                <p>123 Luxury Hotel Street<br />City, State 12345</p>
+                <strong>{t('contact.addressLabel')}</strong>
+                <p>{t('contact.address')}</p>
               </div>
             </div>
             <div className="contact-page__info-item">
               <i className="fa-solid fa-phone" />
               <div>
-                <strong>Phone</strong>
-                <p>+1 (555) 123-4567</p>
+                <strong>{t('contact.phone')}</strong>
+                <p>{t('contact.phoneValue')}</p>
               </div>
             </div>
             <div className="contact-page__info-item">
               <i className="fa-solid fa-envelope" />
               <div>
-                <strong>Email</strong>
-                <p>hello@hotel.example</p>
+                <strong>{t('contact.email')}</strong>
+                <p>{t('contact.emailValue')}</p>
               </div>
             </div>
             <div className="contact-page__info-item">
               <i className="fa-solid fa-clock" />
               <div>
-                <strong>Hours</strong>
-                <p>24/7 Front Desk<br />Reception Available</p>
+                <strong>{t('contact.hours')}</strong>
+                <p>{t('contact.hours24')}</p>
               </div>
             </div>
           </div>
 
           <form onSubmit={handleSubmit} className="contact-page__form">
-            <h2>Send Us a Message</h2>
+            <h2>{t('contact.formTitle')}</h2>
             
             {isSubmitted && (
               <div className="contact-page__success">
                 <i className="fa-solid fa-check-circle" />
-                <p>Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+                <p>{t('contact.successMsg')}</p>
               </div>
             )}
 
             <div className="contact-page__form-row">
               <div className="contact-page__form-group">
                 <label className="contact-page__form-label">
-                  Full Name <span className="contact-page__required">*</span>
+                  {t('contact.fullName')} <span className="contact-page__required">*</span>
                 </label>
                 <input
                   type="text"
@@ -120,7 +122,7 @@ function Contact() {
               </div>
               <div className="contact-page__form-group">
                 <label className="contact-page__form-label">
-                  Email Address <span className="contact-page__required">*</span>
+                  {t('contact.emailAddr')} <span className="contact-page__required">*</span>
                 </label>
                 <input
                   type="email"
@@ -136,7 +138,7 @@ function Contact() {
 
             <div className="contact-page__form-row">
               <div className="contact-page__form-group">
-                <label className="contact-page__form-label">Phone Number</label>
+                <label className="contact-page__form-label">{t('contact.phoneNum')}</label>
                 <input
                   type="tel"
                   name="phone"
@@ -147,7 +149,7 @@ function Contact() {
                 />
               </div>
               <div className="contact-page__form-group">
-                <label className="contact-page__form-label">Subject</label>
+                <label className="contact-page__form-label">{t('contact.subject')}</label>
                 <input
                   type="text"
                   name="subject"
@@ -161,14 +163,14 @@ function Contact() {
 
             <div className="contact-page__form-group contact-page__form-group--full">
               <label className="contact-page__form-label">
-                Message <span className="contact-page__required">*</span>
+                {t('contact.messageLabel')} <span className="contact-page__required">*</span>
               </label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 className="contact-page__form-textarea"
-                placeholder="Tell us how we can help you..."
+                placeholder={t('contact.messagePlaceholder')}
                 rows="6"
                 required
               />
@@ -181,11 +183,11 @@ function Contact() {
             >
               {isSubmitting ? (
                 <>
-                  <i className="fa-solid fa-spinner fa-spin" /> Sending...
+                  <i className="fa-solid fa-spinner fa-spin" /> {t('contact.sending')}
                 </>
               ) : (
                 <>
-                  <i className="fa-solid fa-paper-plane" /> Send Message
+                  <i className="fa-solid fa-paper-plane" /> {t('contact.sendBtn')}
                 </>
               )}
             </button>

@@ -77,8 +77,8 @@ function Header() {
           to="/"
           onClick={closeMenu}
         >
-          <img className="header__logo" src="/images/Logo.webp" alt="Hotel" />
-          <span className="header__title">Hotel</span>
+          <img className="header__logo" src="/images/Logo.webp" alt={t("hero.brand")} />
+          <span className="header__title">{t("hero.brand")}</span>
         </Link>
 
         <button

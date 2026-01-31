@@ -12,13 +12,42 @@
   },
   "hero": {
     "welcome": "Welcome to",
-    "brand": "Your Perfect Getaway",
-    "tagline": "Luxury, comfort, and unforgettable experiences.",
+    "brand": "Ethiopia Grand Hotel",
+    "tagline": "Experience the heart of Africa with luxury and comfort.",
     "checkIn": "Check-in",
     "checkOut": "Check-out",
     "guests": "Guests",
     "guest": "Guest",
     "search": "Search"
+  },
+  "home": {
+    "experiences": {
+      "bookedAlert": "Booked: {{title}}",
+      "guidedHike": {
+        "title": "Guided Coastal Hike",
+        "text": "Explore scenic trails with our expert guide.",
+        "duration": "3h",
+        "price": "$49"
+      },
+      "sunsetCruise": {
+        "title": "Local Culture",
+        "text": "Golden hour cruise with refreshments.",
+        "duration": "2h",
+        "price": "$69"
+      },
+      "chefCooking": {
+        "title": "Cooking Class",
+        "text": "Learn local recipes with our chef.",
+        "duration": "2.5h",
+        "price": "$59"
+      },
+      "sunriseYoga": {
+        "title": "Yoga Retreat",
+        "text": "Sunrise yoga and meditation.",
+        "duration": "1.5h",
+        "price": "$29"
+      }
+    }
   },
   "rooms": {
     "title": "Our Rooms & Suites",
@@ -202,32 +231,123 @@
     }
   },
   "experiences": {
-    "title": "Discover Experiences Beyond Your Stay",
+    "title": "Experiences",
+    "heroTitle": "Discover Experiences Beyond Your Stay",
     "heroSubtitle": "Live the story, not just the stay.",
     "bookExperience": "Book Experience",
-    "addStay": "Add to Your Stay"
+    "addStay": "Add to Your Stay",
+    "categories": {
+      "outdoor": {
+        "title": "Outdoor Adventures",
+        "items": [
+          "Guided hikes",
+          "Boat tours",
+          "Beach excursions"
+        ]
+      },
+      "culinary": {
+        "title": "Culinary Delights",
+        "items": [
+          "Cooking classes",
+          "Wine tastings"
+        ]
+      },
+      "wellness": {
+        "title": "Relaxation & Wellness",
+        "items": [
+          "Spa rituals",
+          "Yoga retreats"
+        ]
+      },
+      "culture": {
+        "title": "Local Culture",
+        "items": [
+          "Festivals",
+          "Art galleries",
+          "Music nights"
+        ]
+      }
+    }
   },
   "testimonials": {
-    "title": "What Our Guests Say",
-    "heroSubtitle": "Hear from those who have experienced our hospitalty.",
+    "title": "Testimonials",
+    "heroTitle": "What Our Guests Say",
+    "heroSubtitle": "Rated 4.9/5 from travelers around the world.",
     "sectionTitle": "Guest Reviews",
-    "sectionSubtitle": "Real stories from real guests."
+    "sectionSubtitle": "Real stories from real guests.",
+    "statsText": "Average 4.9 / 5 across 450+ reviews.",
+    "bookCta": "Experience It Yourself — Book Now",
+    "list": {
+      "sophia": {
+        "name": "Sophia M.",
+        "country": "USA",
+        "date": "Sep 2025",
+        "comment": "An unforgettable stay! The staff went above and beyond to make our anniversary special.",
+        "tag": "Stayed in Deluxe Suite"
+      },
+      "liam": {
+        "name": "Liam O.",
+        "country": "Ireland",
+        "date": "Aug 2025",
+        "comment": "Beautiful rooms and the infinity pool views are stunning. Highly recommended!",
+        "tag": "Family Vacation"
+      },
+      "aisha": {
+        "name": "Aisha K.",
+        "country": "UAE",
+        "date": "Jul 2025",
+        "comment": "Loved the spa and breakfast buffet. Will definitely return.",
+        "tag": "Wellness Escape"
+      }
+    }
   },
   "contact": {
-    "title": "Get in Touch",
-    "heroSubtitle": "We are here to help with any questions or requests.",
-    "infoTitle": "Contact Information",
-    "address": "Address",
+    "title": "Contact",
+    "heroTitle": "Get In Touch",
+    "heroSubtitle": "Experience authentic Ethiopian hospitality in the heart of Addis Ababa.",
+    "infoTitle": "Contact Us in Addis Ababa",
+    "addressLabel": "Address",
+    "address": "Bole Road, Addis Ababa, Ethiopia",
     "phone": "Phone",
+    "phoneValue": "+251 11 123 4567",
     "email": "Email",
+    "emailValue": "contact@ethiopiagrandhotel.com",
+    "hours": "Hours",
+    "hours24": "24/7 Front Desk - Reception Available",
     "office": "Office",
     "formTitle": "Send Us a Message",
-    "name": "Full Name",
+    "successMsg": "Thank you! Your message has been sent successfully. We'll get back to you soon.",
+    "validationError": "Please fill in all required fields (Name, Email, and Message).",
+    "fullName": "Full Name",
+    "emailAddr": "Email Address",
+    "phoneNum": "Phone Number",
     "subject": "Subject",
-    "message": "Message",
-    "send": "Send Message",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell us how we can help you...",
+    "sendBtn": "Send Message",
     "sending": "Sending...",
     "success": "Message sent successfully!"
+  },
+  "bookNow": {
+    "heroTitle": "Your Ethiopia Stay Awaits",
+    "heroSubtitle": "Secure booking, instant confirmation.",
+    "currency": "Currency",
+    "promoCode": "Promo code",
+    "optional": "Optional",
+    "confirmBooking": "Confirm Booking",
+    "summary": "Summary",
+    "nights": "Nights",
+    "baseNight": "Base/night",
+    "subtotal": "Subtotal",
+    "discount": "Discount",
+    "taxes": "Taxes",
+    "total": "Total",
+    "securePayment": "Secure payment (SSL)",
+    "validDatesError": "Please select valid dates.",
+    "checkoutAfterError": "Check-out must be after check-in.",
+    "nameEmailError": "Please enter your name and email.",
+    "confirmedMsg": "Thank you! Your booking is confirmed.",
+    "bookingId": "ID"
   },
   "footer": {
     "tagline": "Luxury stays crafted with care.",

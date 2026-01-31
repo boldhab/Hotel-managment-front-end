@@ -1,85 +1,100 @@
-# Hotel Management Frontend
+# Ethiopia Grand Hotel - Management Frontend
 
-A modern, responsive frontend application for a Hotel Management System, built with **React** and **Vite**. This application provides an interactive interface for guests to view rooms, check amenities, read testimonials, and book their stay.
+Welcome to the **Ethiopia Grand Hotel** management application. This is a premium, high-performance, and fully internationalized web application designed to provide a seamless booking experience and showcase the luxury amenities of the Ethiopia Grand Hotel in Addis Ababa.
 
-## 🚀 Features
+![Luxury Hotel Banner](/public/images/hero/hotel-hero.jpg)
 
-- **Home Page**: Welcoming landing page with a hero section and quick links.
-- **Room Browsing**: detailed views of available rooms (`RoomsPage`, `RoomCard`).
-- **Booking System**: Interactive booking form (`BookNowPage`, `BookingForm`) to reserve rooms.
-- **Amenities & Experiences**: Showcases hotel amenities and special experiences (`AmenitiesPage`, `ExperiencesPage`).
-- **Special Offers**: dedicated section for promotions and offers (`OffersPage`).
-- **Testimonials**: Guest reviews and testimonials (`TestimonialsPage`).
-- **Contact**: Contact information and inquiry form (`Contact`).
-- **Internationalization**: Multi-language support powered by `i18next`.
-- **Responsive Design**: Optimized for various screen sizes.
+## 🌟 Key Features
 
-## 🛠️ Tech Stack
+### 🌎 Full Internationalization (i18n)
+- **Multi-Language Support**: Seamlessly switch between **English**, **Spanish**, and **French**.
+- **Dynamic Content**: All UI labels, search filters, and content lists (amenities, experiences) are managed through a centralized translation system.
 
-- **Framework**: [React](https://react.dev/)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **Routing**: [React Router](https://reactrouter.com/)
-- **Internationalization**: [i18next](https://www.i18next.com/) & [react-i18next](https://react.i18next.com/)
-- **Icons**: [FontAwesome](https://fontawesome.com/)
-- **Linting**: ESLint
+### 🏨 Advanced Room Management
+- **Search & Filter**: Real-time filtering by room type, budget, and capacity.
+- **Comparison Tool**: Select and compare multiple rooms side-by-side to find the perfect stay.
+- **Quick View**: Preview room details, amenities, and ratings without leaving the list.
 
-## 📦 Installation & Setup
+### 📅 Seamless Booking Flow
+- **Multi-Step Modal**: A streamlined booking process including date selection, guest management, and simulated payment processing.
+- **Dedicated Booking Page**: A full-page booking experience for direct reservations with promo code support.
 
-Follow these steps to set up the project locally.
-
-### Prerequisites
-
-- Node.js (v16 or higher recommended)
-- npm or yarn
-
-### Steps
-
-1.  **Clone the repository** (if applicable) or navigate to the project directory.
-
-2.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
-
-3.  **Run the development server**:
-    ```bash
-    npm run dev
-    ```
-    The application will typically start at `http://localhost:5173`.
-
-## 📜 Scripts
-
-- `npm run dev`: Starts the development server.
-- `npm run build`: Builds the app for production.
-- `npm run lint`: Runs ESLint to check for code quality issues.
-- `npm run preview`: Previews the production build locally.
-
-## 📂 Project Structure
-
-```
-src/
-├── assets/          # Static assets (images, etc.)
-├── components/      # Reusable UI components (Header, Footer, BookingForm, etc.)
-├── i18n/            # Internationalization configuration and translations
-├── pages/           # Application pages (Home, About, BookNow, etc.)
-├── styles/          # Global styles
-├── utils/           # Utility functions
-├── App.jsx          # Main application component
-└── main.jsx         # Entry point
-```
-
-## 🌍 Internationalization
-
-This project supports multiple languages using `i18next`. Translation files are located in the `src/i18n` directory.
-
-## 🤝 Contributing
-
-1.  Fork the project.
-2.  Create your feature branch (`git checkout -b feature/AmazingFeature`).
-3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-4.  Push to the branch (`git push origin feature/AmazingFeature`).
-5.  Open a Pull Request.
+### 🎨 Premium UI/UX
+- **Responsive Design**: Mobile-first architecture ensured by professional CSS layouts.
+- **Dark & Light Mode**: Integrated theme switcher for personalized user experience.
+- **Rich Aesthetics**: Vibrant gradients, smooth transitions, and high-quality imagery reflecting the heart of Africa.
 
 ---
 
-*Generated for the Hotel Management Project.*
+## 🚀 Tech Stack
+
+- **Framework**: [React 18](https://reactjs.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Routing**: [React Router 6](https://reactrouter.com/)
+- **Internationalization**: [react-i18next](https://react.i18next.com/)
+- **Icons**: [FontAwesome 6](https://fontawesome.com/)
+- **Styling**: Vanilla CSS with modern Flexbox and Grid layouts.
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v16.x or higher recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone [repository-url]
+   cd hotel-app
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 📂 Project Structure
+
+```text
+hotel-app/
+├── public/              # Static assets (images, logos)
+├── src/
+│   ├── components/      # Reusable UI components (Header, Footer, RoomCard)
+│   ├── i18n/            # Translation files (en.json, es.json, fr.json)
+│   ├── pages/           # High-level page components (Home, Rooms, Contact)
+│   ├── styles/          # Global styles and theme configurations
+│   ├── utils/           # Helper functions and constants
+│   ├── App.jsx          # Main application component & routes
+│   └── main.jsx         # Application entry point
+├── index.html           # HTML entry point
+└── vite.config.js       # Vite configuration
+```
+
+---
+
+## 📞 Contact & Support
+
+Located in the heart of **Addis Ababa, Ethiopia**, we are dedicated to providing the best hospitality experience.
+
+- **Address**: Bole Road, Addis Ababa, Ethiopia
+- **Phone**: +251 11 123 4567
+- **Email**: contact@ethiopiagrandhotel.com
+
+---
+
+© 2026 Ethiopia Grand Hotel. All rights reserved.

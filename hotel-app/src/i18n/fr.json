@@ -12,13 +12,42 @@
   },
   "hero": {
     "welcome": "Bienvenue à",
-    "brand": "Votre escapade parfaite",
-    "tagline": "Luxe, confort et expériences inoubliables.",
+    "brand": "Grand Hôtel d'Éthiopie",
+    "tagline": "Découvrez le cœur de l'Afrique avec luxe et confort.",
     "checkIn": "Arrivée",
     "checkOut": "Départ",
     "guests": "Invités",
     "guest": "Invité",
     "search": "Rechercher"
+  },
+  "home": {
+    "experiences": {
+      "bookedAlert": "Réservé : {{title}}",
+      "guidedHike": {
+        "title": "Randonnée côtière guidée",
+        "text": "Explorez des sentiers pittoresques avec notre guide expert.",
+        "duration": "3h",
+        "price": "49 €"
+      },
+      "sunsetCruise": {
+        "title": "Culture locale",
+        "text": "Croisière au coucher du soleil avec rafraîchissements.",
+        "duration": "2h",
+        "price": "69 €"
+      },
+      "chefCooking": {
+        "title": "Cours de cuisine",
+        "text": "Apprenez des recettes locales avec notre chef.",
+        "duration": "2.5h",
+        "price": "59 €"
+      },
+      "sunriseYoga": {
+        "title": "Retraite de yoga",
+        "text": "Yoga au lever du soleil et méditation.",
+        "duration": "1.5h",
+        "price": "29 €"
+      }
+    }
   },
   "rooms": {
     "title": "Nos Chambres & Suites",
@@ -112,46 +141,213 @@
     "success": "Succès ! Vous avez réservé {{room}} pour ${{total}}."
   },
   "amenities": {
-    "title": "Nos Services",
+    "title": "Services",
+    "heroTitle": "Détendez-vous dans le confort",
     "heroSubtitle": "Découvrez une relaxation et une commodité ultimes.",
     "sectionTitle": "Explorez nos installations",
-    "sectionSubtitle": "Tout ce dont vous avez besoin pour un séjour parfait."
+    "sectionSubtitle": "Tout ce dont vous avez besoin pour un séjour parfait.",
+    "exploreRooms": "Explorez nos chambres",
+    "categories": {
+      "comforts": {
+        "title": "Confort des chambres",
+        "items": [
+          "Lits King",
+          "Climatisation intelligente",
+          "Linge de lit de luxe"
+        ]
+      },
+      "wellness": {
+        "title": "Bien-être & Spa",
+        "items": [
+          "Massages",
+          "Sauna",
+          "Salle de sport & Yoga"
+        ]
+      },
+      "dining": {
+        "title": "Restauration & Bars",
+        "items": [
+          "Restaurant sur place",
+          "Salon sur le toit",
+          "Petit-déjeuner buffet"
+        ]
+      },
+      "outdoor": {
+        "title": "Plein air & Loisirs",
+        "items": [
+          "Piscine",
+          "Jardin",
+          "Location de vélos"
+        ]
+      },
+      "business": {
+        "title": "Affaires & Événements",
+        "items": [
+          "Salles de réunion",
+          "Salle de conférence",
+          "Coworking"
+        ]
+      },
+      "family": {
+        "title": "Idéal pour les familles",
+        "items": [
+          "Piscine pour enfants",
+          "Baby-sitting",
+          "Suites familiales"
+        ]
+      }
+    }
   },
   "offers": {
-    "title": "Offres & Forfaits Exclusifs",
+    "title": "Offres",
+    "heroTitle": "Offres & Forfaits Exclusifs",
     "heroSubtitle": "Rendez votre prochain séjour inoubliable — à un tarif exclusif.",
     "claimOffer": "Réclamer l'offre",
     "bookNow": "Réserver",
     "learnMore": "En savoir plus",
-    "useCode": "Utiliser le code"
+    "useCode": "Utiliser le code",
+    "detailsNotice": "détails",
+    "list": {
+      "romantic": {
+        "title": "Escapade Romantique",
+        "description": "Champagne, dîner et départ tardif.",
+        "badge": "Économisez 20%"
+      },
+      "earlyBird": {
+        "title": "Spécial Réservation Anticipée",
+        "description": "Économisez 15% en réservant 30+ jours à l'avance.",
+        "badge": "15% de réduction"
+      },
+      "gourmet": {
+        "title": "Expérience Gourmet",
+        "description": "Dîner pour deux avec accord mets-vins.",
+        "badge": "Dîner inclus"
+      },
+      "spa": {
+        "title": "Indulgence Spa",
+        "description": "Massage et petit-déjeuner inclus.",
+        "badge": "Spa + Petit-déjeuner"
+      }
+    }
   },
   "experiences": {
-    "title": "Découvrez des expériences au-delà de votre séjour",
+    "title": "Expériences",
+    "heroTitle": "Découvrez des expériences au-delà de votre séjour",
     "heroSubtitle": "Vivez l'histoire, pas seulement le séjour.",
     "bookExperience": "Réserver l'expérience",
-    "addStay": "Ajouter à votre séjour"
+    "addStay": "Ajouter à votre séjour",
+    "categories": {
+      "outdoor": {
+        "title": "Aventures en plein air",
+        "items": [
+          "Randonnées guidées",
+          "Tours en bateau",
+          "Excursions à la plage"
+        ]
+      },
+      "culinary": {
+        "title": "Délices culinaires",
+        "items": [
+          "Cours de cuisine",
+          "Dégustations de vins"
+        ]
+      },
+      "wellness": {
+        "title": "Relaxation & Bien-être",
+        "items": [
+          "Rituels de spa",
+          "Retraites de yoga"
+        ]
+      },
+      "culture": {
+        "title": "Culture locale",
+        "items": [
+          "Festivals",
+          "Galeries d'art",
+          "Soirées musicales"
+        ]
+      }
+    }
   },
   "testimonials": {
-    "title": "Ce que disent nos clients",
-    "heroSubtitle": "Écoutez ceux qui ont fait l'expérience de notre hospitalité.",
+    "title": "Témoignages",
+    "heroTitle": "Ce que disent nos clients",
+    "heroSubtitle": "Noté 4.9/5 par des voyageurs du monde entier.",
     "sectionTitle": "Avis des clients",
-    "sectionSubtitle": "Histoires réelles de clients réels."
+    "sectionSubtitle": "Histoires réelles de clients réels.",
+    "statsText": "Moyenne de 4.9 / 5 sur plus de 450 avis.",
+    "bookCta": "Faites-en l'expérience vous-même — Réservez maintenant",
+    "list": {
+      "sophia": {
+        "name": "Sophia M.",
+        "country": "USA",
+        "date": "Sep 2025",
+        "comment": "Un séjour inoubliable ! Le personnel a tout fait pour que notre anniversaire soit spécial.",
+        "tag": "Séjour en Suite de Luxe"
+      },
+      "liam": {
+        "name": "Liam O.",
+        "country": "Irlande",
+        "date": "Août 2025",
+        "comment": "Magnifiques chambres et la vue sur la piscine à débordement est superbe. Hautement recommandé !",
+        "tag": "Vacances en famille"
+      },
+      "aisha": {
+        "name": "Aisha K.",
+        "country": "EAU",
+        "date": "Juil 2025",
+        "comment": "J'ai adoré le spa et le petit-déjeuner buffet. Je reviendrai certainement.",
+        "tag": "Escapade bien-être"
+      }
+    }
   },
   "contact": {
-    "title": "Contactez-nous",
-    "heroSubtitle": "Nous sommes là pour répondre à vos questions ou demandes.",
-    "infoTitle": "Informations de contact",
-    "address": "Adresse",
+    "title": "Contact",
+    "heroTitle": "Contactez-nous",
+    "heroSubtitle": "Découvrez l'hospitalité éthiopienne authentique au cœur d'Addis-Abeba.",
+    "infoTitle": "Contactez-nous à Addis-Abeba",
+    "addressLabel": "Adresse",
+    "address": "Bole Road, Addis-Abeba, Éthiopie",
     "phone": "Téléphone",
+    "phoneValue": "+251 11 123 4567",
     "email": "E-mail",
+    "emailValue": "contact@ethiopiagrandhotel.com",
+    "hours": "Horaires",
+    "hours24": "Réception ouverte 24h/24, 7j/7",
     "office": "Bureau",
     "formTitle": "Envoyez-nous un message",
-    "name": "Nom complet",
+    "successMsg": "Merci ! Votre message a été envoyé avec succès. Nous vous répondrons bientôt.",
+    "validationError": "Veuillez remplir tous les champs obligatoires (Nom, E-mail et Message).",
+    "fullName": "Nom complet",
+    "emailAddr": "Adresse e-mail",
+    "phoneNum": "Numéro de téléphone",
     "subject": "Sujet",
-    "message": "Message",
-    "send": "Envoyer le message",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Dites-nous comment nous pouvons vous aider...",
+    "sendBtn": "Envoyer le message",
     "sending": "Envoi en cours...",
     "success": "Message envoyé avec succès !"
+  },
+  "bookNow": {
+    "heroTitle": "Votre séjour en Éthiopie vous attend",
+    "heroSubtitle": "Réservation sécurisée, confirmation immédiate.",
+    "currency": "Devise",
+    "promoCode": "Code promo",
+    "optional": "Optionnel",
+    "confirmBooking": "Confirmer la réservation",
+    "summary": "Résumé",
+    "nights": "Nuits",
+    "baseNight": "Base/nuit",
+    "subtotal": "Sous-total",
+    "discount": "Remise",
+    "taxes": "Taxes",
+    "total": "Total",
+    "securePayment": "Paiement sécurisé (SSL)",
+    "validDatesError": "Veuillez sélectionner des dates valides.",
+    "checkoutAfterError": "Le départ doit être après l'arrivée.",
+    "nameEmailError": "Veuillez saisir votre nom et votre e-mail.",
+    "confirmedMsg": "Merci ! Votre réservation est confirmée.",
+    "bookingId": "ID"
   },
   "footer": {
     "tagline": "Des séjours de luxe conçus avec soin.",

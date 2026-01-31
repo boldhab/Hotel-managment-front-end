@@ -21,6 +21,7 @@ function OffersPage() {
     { key: 'gourmet', image: '/images/offer/gourmet-experience.jpg', code: 'FOODIE' },
     { key: 'spa', image: '/images/amenties/spa-indulgence.jpg', code: 'RELAX' },
   ];
+  return (
     <div>
       <section className="offers-page__hero">
         <div className="offers-page__hero-overlay" />
