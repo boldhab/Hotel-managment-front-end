@@ -1,0 +1,348 @@
+.room-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.room-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.room-card--selected {
+  border-color: #3498db;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbfe 100%);
+}
+
+.room-card__media {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  cursor: default;
+}
+
+.room-card__image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+.room-card__media:hover .room-card__image {
+  transform: scale(1.05);
+}
+
+.room-card__gallery-indicators {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.room-card__gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.room-card__gallery-dot.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+.room-card__gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #2c3e50;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.room-card__gallery-nav--prev {
+  left: 12px;
+}
+
+.room-card__gallery-nav--next {
+  right: 12px;
+}
+
+.room-card__media:hover .room-card__gallery-nav {
+  opacity: 1;
+}
+
+.room-card__gallery-nav:hover {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.room-card__badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2;
+}
+
+.room-card__rating {
+  background: rgba(52, 152, 219, 0.95);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  backdrop-filter: blur(10px);
+}
+
+.room-card__rating i {
+  font-size: 0.7rem;
+}
+
+.room-card__reviews {
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+.room-card__popular {
+  background: rgba(231, 76, 60, 0.95);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  backdrop-filter: blur(10px);
+}
+
+.room-card__compare-checkbox {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.room-card__compare-checkbox input {
+  display: none;
+}
+
+.room-card__compare-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3498db;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.room-card__compare-checkbox:hover .room-card__compare-icon {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.room-card__body {
+  padding: 1rem 1rem 1.1rem;
+}
+
+.room-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.room-card__title {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.room-card__size {
+  font-size: 0.8rem;
+  color: #6b7280;
+  background: #f3f4f6;
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+}
+
+.room-card__bed-type {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.room-card__description {
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0.25rem 0 0.6rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.room-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.room-card__price-section {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+.room-card__price strong {
+  font-size: 1.1rem;
+  color: #111827;
+}
+.room-card__unit {
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-left: 0.15rem;
+}
+.room-card__total-price {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
+.room-card__capacity {
+  color: #4b5563;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.room-card__amenities-section {
+  margin-top: 0.5rem;
+}
+.room-card__amenities-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.room-card__amenities-header h4 {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #111827;
+}
+.room-card__amenities-toggle {
+  background: transparent;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.room-card__amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  list-style: none;
+}
+.room-card__amenity {
+  background: #f3f4f6;
+  color: #374151;
+  border-radius: 999px;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.8rem;
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.room-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+.room-card__btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+.room-card__btn--primary {
+  background: #2f6342ff;
+  color: #ffffff;
+}
+.room-card__btn--primary:hover {
+  background: #1d432bff;
+}
+.room-card__btn--secondary {
+  background: #111827;
+  color: #ffffff;
+}
+.room-card__btn--secondary:hover {
+  background: #0b1220;
+}
+.room-card__btn--icon {
+  background: #f3f4f6;
+  color: #111827;
+  padding: 0.45rem;
+}
+.room-card__btn--icon:hover {
+  background: #e5e7eb;
+}
+
+.room-card__availability {
+  margin-top: 0.6rem;
+  color: #16a34a;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+.room-card__availability--unavailable {
+  color: #dc2626;
+}

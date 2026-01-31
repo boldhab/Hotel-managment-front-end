@@ -1,0 +1,107 @@
+.experiences-page__hero {
+  position: relative;
+  min-height: 50vh;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: url(/images/HOME_hotel.jpg) center/cover no-repeat;
+}
+
+.experiences-page__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.experiences-page__hero-content {
+  position: relative;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.experiences-page__hero-title {
+  font-size: 44px;
+  margin: 0;
+}
+
+.experiences-page__hero-subtitle {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.experiences-page__content {
+  padding: 56px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experiences-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.experiences-page__card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.experiences-page__card-image {
+  height: 160px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.experiences-page__card-body {
+  padding: 20px;
+}
+
+.experiences-page__card-title {
+  margin: 0 0 8px 0;
+}
+
+.experiences-page__card-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.experiences-page__card-list li {
+  line-height: 1.8;
+}
+
+.experiences-page__card-btn {
+  margin-top: 12px;
+  background: #0f766e;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.experiences-page__card-btn:hover {
+  background: #0d5d56;
+}
+
+.experiences-page__cta {
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.experiences-page__cta-link {
+  display: inline-block;
+  background: #0f766e;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.experiences-page__cta-link:hover {
+  background: #0d5d56;
+}

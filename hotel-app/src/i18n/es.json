@@ -1,0 +1,25 @@
+{
+  "header": {
+    "home": "Inicio",
+    "rooms": "Habitaciones",
+    "amenities": "Servicios",
+    "offers": "Ofertas",
+    "experiences": "Experiencias",
+    "contact": "Contacto",
+    "bookNow": "Reservar",
+    "language": "Idioma"
+  }
+  ,
+  "hero": {
+    "welcome": "Bienvenido a",
+    "brand": "Tu escapada perfecta",
+    "tagline": "Lujo, confort y experiencias inolvidables.",
+    "checkIn": "Entrada",
+    "checkOut": "Salida",
+    "guests": "Huéspedes",
+    "guest": "Huésped",
+    "search": "Buscar"
+  }
+}
+
+

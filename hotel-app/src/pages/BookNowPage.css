@@ -1,0 +1,141 @@
+.book-page__hero {
+  position: relative;
+  min-height: 30vh;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: url(/images/HOME_hotel.jpg) center/cover no-repeat;
+}
+
+.book-page__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.book-page__hero-content {
+  position: relative;
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.book-page__hero-title {
+  font-size: 40px;
+  margin: 0;
+}
+
+.book-page__hero-subtitle {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.book-page__content {
+  padding: 32px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 360px;
+}
+
+@media (max-width: 768px) {
+  .book-page__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.book-page__form {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.book-page__form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.book-page__form-row {
+  display: grid;
+  gap: 12px;
+}
+
+.book-page__form-row--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.book-page__form-row--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .book-page__form-row--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.book-page__form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-page__form-label {
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.book-page__form-input,
+.book-page__form-select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.book-page__form-submit {
+  background: #0f766e;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.book-page__form-submit:hover {
+  background: #0d5d56;
+}
+
+.book-page__summary {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  height: fit-content;
+}
+
+.book-page__summary-title {
+  margin-top: 0;
+}
+
+.book-page__summary-grid {
+  display: grid;
+  gap: 8px;
+  color: #334155;
+}
+
+.book-page__summary-total {
+  border-top: 1px solid #e2e8f0;
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+.book-page__summary-security {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  color: #64748b;
+  align-items: center;
+}

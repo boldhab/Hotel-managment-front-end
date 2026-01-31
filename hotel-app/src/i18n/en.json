@@ -1,0 +1,25 @@
+{
+  "header": {
+    "home": "Home",
+    "rooms": "Rooms",
+    "amenities": "Amenities",
+    "offers": "Offers",
+    "experiences": "Experiences",
+    "contact": "Contact",
+    "bookNow": "Book Now",
+    "language": "Language"
+  }
+  ,
+  "hero": {
+    "welcome": "Welcome to",
+    "brand": "Your Perfect Getaway",
+    "tagline": "Luxury, comfort, and unforgettable experiences.",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "guests": "Guests",
+    "guest": "Guest",
+    "search": "Search"
+  }
+}
+
+

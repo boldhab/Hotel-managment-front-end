@@ -1,0 +1,42 @@
+.amenities {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.amenities__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.amenities__card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.amenities__card-image {
+  height: 140px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.amenities__card-body {
+  padding: 16px;
+}
+
+.amenities__card-title {
+  margin: 0 0 8px 0;
+}
+
+.amenities__card-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.amenities__card-list li {
+  line-height: 1.8;
+}

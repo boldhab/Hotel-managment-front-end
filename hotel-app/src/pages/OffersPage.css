@@ -1,0 +1,61 @@
+.offers-page__hero {
+  position: relative;
+  min-height: 40vh;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: url(/images/HOME_hotel.jpg) center/cover no-repeat;
+}
+
+.offers-page__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.offers-page__hero-content {
+  position: relative;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.offers-page__hero-title {
+  font-size: 44px;
+  margin: 0;
+}
+
+.offers-page__hero-subtitle {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.offers-page__content {
+  padding: 48px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.offers-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.offers-page__cta {
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.offers-page__cta-link {
+  display: inline-block;
+  background: #0f766e;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.offers-page__cta-link:hover {
+  background: #0d5d56;
+}
