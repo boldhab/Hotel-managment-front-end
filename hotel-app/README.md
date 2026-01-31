@@ -87,14 +87,7 @@ hotel-app/
 
 ---
 
-## 📞 Contact & Support
+## Developed by Habtamu Befekadu (Bold Hab)
 
-Located in the heart of **Addis Ababa, Ethiopia**, we are dedicated to providing the best hospitality experience.
 
-- **Address**: Bole Road, Addis Ababa, Ethiopia
-- **Phone**: +251 11 123 4567
-- **Email**: contact@ethiopiagrandhotel.com
-
----
-
-© 2026 Ethiopia Grand Hotel. All rights reserved.
+© 2026 All rights reserved.
